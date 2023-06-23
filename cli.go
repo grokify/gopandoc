@@ -6,8 +6,6 @@ import (
 	"os"
 	"os/exec"
 	"strings"
-
-	"github.com/grokify/mogo/fmt/fmtutil"
 )
 
 var ErrOptsNil = errors.New("opts is nil")
@@ -69,7 +67,7 @@ func Exec(opts *PandocOpts) error {
 	}
 	// https://www.mscharhag.com/software-development/pandoc-markdown-to-pdf
 	args := opts.CLIArgs()
-	fmtutil.PrintJSON(args)
+	// fmtutil.PrintJSON(args)
 	fmt.Println(strings.Join(args, " "))
 	cmd := exec.Command(CLICommand, args...)
 	cmd.Stdout = os.Stdout
