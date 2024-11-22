@@ -2,7 +2,7 @@ package gopandoc
 
 import "os"
 
-func WriteFilesLines(basename string, data []string, marginUnit string, marginScalar uint) error {
+func WriteFilesLines(basename string, data []string, marginUnit string, marginScalar int) error {
 	return WriteFiles(basename, []byte(MarkdownLines(marginUnit, marginScalar, data)))
 }
 

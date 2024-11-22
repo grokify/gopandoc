@@ -6,13 +6,13 @@ import (
 	"github.com/grokify/mogo/type/stringsutil"
 )
 
-func MarkdownLines(marginUnit string, marginScalar uint, lines []string) string {
+func MarkdownLines(marginUnit string, marginScalar int, lines []string) string {
 	lines = stringsutil.SliceCondenseSpace(lines, false, false)
 	str := strings.Join(lines, "\n\n")
 
 	marginUnit = strings.TrimSpace(marginUnit)
 	if marginUnit != "" {
-		header := MarginHeaderLines(NewGeometry(marginUnit, int(marginScalar)))
+		header := MarginHeaderLines(NewGeometry(marginUnit, marginScalar))
 		hstr := strings.Join(header, "\n")
 		str = hstr + "\n\n" + str
 	}

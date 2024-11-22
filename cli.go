@@ -29,7 +29,6 @@ func (p *PandocOpts) TrimSpace() {
 	for i, input := range p.InputFiles {
 		p.InputFiles[i] = strings.TrimSpace(input)
 	}
-
 }
 
 func (p *PandocOpts) CLIArgs() []string {
