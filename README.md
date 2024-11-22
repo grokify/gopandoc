@@ -9,7 +9,7 @@ Helper for [Pandoc](https://pandoc.org/).
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/gopandoc/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gopandoc?badge
- [build-status-svg]: https://github.com/grokify/gopandoc/workflows/test/badge.svg?branch=master
+ [build-status-svg]: https://github.com/grokify/gopandoc/workflows/test/badge.svg
  [build-status-url]: https://github.com/grokify/gopandoc/actions
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/gopandoc
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/gopandoc
