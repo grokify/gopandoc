@@ -1,41 +1,42 @@
 package gopandoc
 
-import "os"
+import (
+	"io"
+	"os"
 
-func WriteFilesLines(basename string, data []string, marginUnit string, marginScalar int) error {
-	return WriteFiles(basename, []byte(MarkdownLines(marginUnit, marginScalar, data)))
+	"github.com/grokify/mogo/os/fileext"
+)
+
+func WriteFilesLines(basename string, data []string, marginUnit string, marginScalar int, stdout io.Writer, stderr io.Writer) error {
+	return WriteFiles(basename, []byte(MarkdownLines(marginUnit, marginScalar, data)), stdout, stderr)
 }
 
-func WriteFiles(basename string, data []byte) error {
-	mdfile := basename + ".md"
-	pdffile := basename + ".pdf"
-	docxfile := basename + ".docx"
+func WriteFiles(basename string, data []byte, stdout io.Writer, stderr io.Writer) error {
+	fileMkdn := basename + "." + fileext.ExtMarkdown
+	filePDF := basename + "." + fileext.ExtPDF
+	fileDOCX := basename + "." + fileext.ExtDOCX
 
-	err := os.WriteFile(mdfile, data, 0600)
-	if err != nil {
+	if err := os.WriteFile(fileMkdn, data, 0600); err != nil {
 		return err
 	}
 
 	popts := &PandocOpts{
-		InputFiles: []string{mdfile},
-		OutputFile: pdffile,
+		InputFiles: []string{fileMkdn},
+		OutputFile: filePDF,
 		FromFormat: FormatMarkdown,
 		ToFormat:   FormatPDF,
 		Margin:     "",
 	}
-	err = Exec(popts)
-	if err != nil {
+	if err := Exec(popts, stdout, stderr); err != nil {
 		return err
 	}
 
 	popts2 := &PandocOpts{
-		InputFiles: []string{mdfile},
-		OutputFile: docxfile,
+		InputFiles: []string{fileMkdn},
+		OutputFile: fileDOCX,
 		FromFormat: FormatMarkdown,
 		ToFormat:   FormatDOCX,
 		Margin:     "",
 	}
-	err = Exec(popts2)
-
-	return err
+	return Exec(popts2, stdout, stderr)
 }

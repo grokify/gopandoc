@@ -3,7 +3,7 @@ package gopandoc
 import (
 	"errors"
 	"fmt"
-	"os"
+	"io"
 	"os/exec"
 	"strings"
 )
@@ -60,7 +60,7 @@ func PandocOptsExmample() PandocOpts {
 	}
 }
 
-func Exec(opts *PandocOpts) error {
+func Exec(opts *PandocOpts, stdout io.Writer, stderr io.Writer) error {
 	if opts == nil {
 		return ErrOptsNil
 	}
@@ -69,8 +69,8 @@ func Exec(opts *PandocOpts) error {
 	// fmtutil.PrintJSON(args)
 	fmt.Println(strings.Join(args, " "))
 	cmd := exec.Command(CLICommand, args...)
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
+	cmd.Stdout = stdout
+	cmd.Stderr = stderr
 	return cmd.Run()
 }
 
