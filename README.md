@@ -7,6 +7,11 @@
 
 Helper for [Pandoc](https://pandoc.org/).
 
+## References
+
+1. [Add styling rules in pandoc tables for odt/docx output (table borders) (Stack Overflow)](https://stackoverflow.com/questions/17858598/add-styling-rules-in-pandoc-tables-for-odt-docx-output-table-borders)
+2. [How do I add custom formatting to docx files generated in Pandoc? (Stack Overflow)](https://stackoverflow.com/questions/70513062/how-do-i-add-custom-formatting-to-docx-files-generated-in-pandoc)
+
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/gopandoc/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gopandoc?badge
  [build-status-svg]: https://github.com/grokify/gopandoc/workflows/test/badge.svg
