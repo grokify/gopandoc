@@ -33,14 +33,16 @@ func WriteFiles(basename string, data []byte, writeDOCX, writePDF bool, stdout i
 		}
 	}
 	if writeDOCX {
-		popts2 := &PandocOpts{
+		popts := &PandocOpts{
 			InputFiles: []string{fileMkdn},
 			OutputFile: fileDOCX,
 			FromFormat: FormatMarkdown,
 			ToFormat:   FormatDOCX,
 			Margin:     "",
 		}
-		return Exec(popts2, stdout, stderr)
+		if err := Exec(popts, stdout, stderr); err != nil {
+			return err
+		}
 	}
 	return nil
 }
