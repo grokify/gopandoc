@@ -1,6 +1,7 @@
 # GoPandoc
 
 [![Build Status][build-status-svg]][build-status-url]
+[![Lint Status][lint-status-svg]][lint-status-url]
 [![Go Report Card][goreport-svg]][goreport-url]
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
@@ -16,6 +17,8 @@ Helper for [Pandoc](https://pandoc.org/).
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gopandoc?badge
  [build-status-svg]: https://github.com/grokify/gopandoc/actions/workflows/ci.yaml/badge.svg?branch=main
  [build-status-url]: https://github.com/grokify/gopandoc/actions/workflows/ci.yaml
+ [lint-status-svg]: https://github.com/grokify/gopandoc/actions/workflows/lint.yaml/badge.svg?branch=main
+ [lint-status-url]: https://github.com/grokify/gopandoc/actions/workflows/lint.yaml
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/gopandoc
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/gopandoc
  [codeclimate-status-svg]: https://codeclimate.com/github/grokify/gopandoc/badges/gpa.svg
