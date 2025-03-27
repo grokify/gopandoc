@@ -14,8 +14,8 @@ Helper for [Pandoc](https://pandoc.org/).
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/gopandoc/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/gopandoc?badge
- [build-status-svg]: https://github.com/grokify/gopandoc/workflows/test/badge.svg
- [build-status-url]: https://github.com/grokify/gopandoc/actions
+ [build-status-svg]: https://github.com/grokify/gopandoc/actions/workflows/ci.yaml/badge.svg?branch=main
+ [build-status-url]: https://github.com/grokify/gopandoc/actions/workflows/ci.yaml
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/gopandoc
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/gopandoc
  [codeclimate-status-svg]: https://codeclimate.com/github/grokify/gopandoc/badges/gpa.svg
