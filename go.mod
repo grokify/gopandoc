@@ -2,7 +2,9 @@ module github.com/grokify/gopandoc
 
 go 1.23.2
 
-require github.com/grokify/mogo v0.68.3
+toolchain go1.24.1
+
+require github.com/grokify/mogo v0.68.4
 
 require (
 	github.com/huandu/xstrings v1.5.0 // indirect
