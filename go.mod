@@ -2,10 +2,10 @@ module github.com/grokify/gopandoc
 
 go 1.23.2
 
-require github.com/grokify/mogo v0.68.3
+require github.com/grokify/mogo v0.68.18
 
 require (
 	github.com/huandu/xstrings v1.5.0 // indirect
-	golang.org/x/exp v0.0.0-20250305212735-054e65f0b394 // indirect
-	golang.org/x/text v0.23.0 // indirect
+	golang.org/x/exp v0.0.0-20250506013437-ce4c2cf36ca6 // indirect
+	golang.org/x/text v0.25.0 // indirect
 )
