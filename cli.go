@@ -19,6 +19,10 @@ type PandocOpts struct {
 	Margin     string
 }
 
+func (p *PandocOpts) Exec(stdout io.Writer, stderr io.Writer) error {
+	return Exec(p, stdout, stderr)
+}
+
 func (p *PandocOpts) TrimSpace() {
 	p.Geometry = strings.TrimSpace(p.Geometry)
 	p.Margin = strings.TrimSpace(p.Margin)
