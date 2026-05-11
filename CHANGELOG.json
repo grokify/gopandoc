@@ -1,0 +1,123 @@
+{
+  "irVersion": "1.0",
+  "project": "gopandoc",
+  "repository": "https://github.com/grokify/gopandoc",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "maintainers": ["grokify", "johncwang@gmail.com"],
+  "releases": [
+    {
+      "version": "v0.4.0",
+      "date": "2026-05-11",
+      "highlights": [
+        { "description": "New `citation` package for bibliographic references with multiple citation styles (Simple, MLA, APA, Chicago)" },
+        { "description": "New `citegen` CLI tool for generating formatted reference lists from JSON" }
+      ],
+      "added": [
+        { "description": "`citation` package with `Reference` and `Author` types for bibliographic data", "commit": "bdbf8b9" },
+        { "description": "`Collection` type for loading/saving references from JSON with validation", "commit": "bdbf8b9" },
+        { "description": "`SimpleFormatter` for readable citation output", "commit": "bdbf8b9" },
+        { "description": "`MLAFormatter` for MLA 9th edition citation style", "commit": "bdbf8b9" },
+        { "description": "`APAFormatter` for APA 7th edition citation style", "commit": "bdbf8b9" },
+        { "description": "`ChicagoFormatter` for Chicago Manual of Style (bibliography and notes)", "commit": "bdbf8b9" },
+        { "description": "`FormatMarkdown()` and `FormatMarkdownGrouped()` for markdown output", "commit": "bdbf8b9" },
+        { "description": "`citegen` CLI tool using Cobra with `generate`, `validate`, and `tags` subcommands", "commit": "bdbf8b9" },
+        { "description": "Tag-based filtering and grouping of references", "commit": "bdbf8b9" }
+      ],
+      "dependencies": [
+        { "description": "Add `github.com/spf13/cobra` v1.10.2 for CLI", "commit": "bdbf8b9" },
+        { "description": "Update `github.com/grokify/mogo` to v0.74.4", "commit": "bdbf8b9" }
+      ],
+      "tests": [
+        { "description": "Comprehensive tests for citation package: author formatting, reference validation, formatters", "commit": "bdbf8b9" }
+      ],
+      "internal": [
+        { "description": "Update CI workflow files", "commit": "b0bb606" },
+        { "description": "Update LICENSE copyright year", "commit": "bd59ba6" }
+      ],
+      "documentation": [
+        { "description": "Update README.md shields and add citation package documentation", "commit": "86b79ca" }
+      ]
+    },
+    {
+      "version": "v0.3.3",
+      "date": "2025-09-21",
+      "commit": "a665184",
+      "internal": [
+        { "description": "Lint fixes and code cleanup" }
+      ],
+      "dependencies": [
+        { "description": "Update dependencies" }
+      ]
+    },
+    {
+      "version": "v0.3.2",
+      "date": "2025-05-12",
+      "commit": "5b82dcc",
+      "dependencies": [
+        { "description": "Update `go.mod` dependencies" }
+      ]
+    },
+    {
+      "version": "v0.3.1",
+      "date": "2025-03-27",
+      "internal": [
+        { "description": "Maintenance release with minor fixes" }
+      ]
+    },
+    {
+      "version": "v0.3.0",
+      "date": "2024-11-23",
+      "commit": "c5fdc75",
+      "highlights": [
+        { "description": "Enhanced `WriteFiles()` with DOCX and PDF output options" }
+      ],
+      "added": [
+        { "description": "`writeDOCX` option in `WriteFiles()` for DOCX output", "commit": "fc58256" },
+        { "description": "`writePDF` option in `WriteFiles()` for PDF output", "commit": "fc58256" }
+      ],
+      "changed": [
+        { "description": "Refactored `WriteFiles()` for consistency", "commit": "c5fdc75" }
+      ],
+      "documentation": [
+        { "description": "Added references for enhancements to README", "commit": "10aa711" }
+      ]
+    },
+    {
+      "version": "v0.2.0",
+      "date": "2024-11-22",
+      "commit": "8251d79",
+      "highlights": [
+        { "description": "Added stdout and stderr support for CLI operations" }
+      ],
+      "added": [
+        { "description": "`stdout` and `stderr` support in CLI functions", "commit": "8251d79" }
+      ],
+      "internal": [
+        { "description": "Added `.gitignore`", "commit": "f361418" }
+      ]
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2024-11-22",
+      "commit": "a665184",
+      "highlights": [
+        { "description": "Initial release with Pandoc helper utilities for Go" }
+      ],
+      "added": [
+        { "description": "Core Pandoc helper functions", "commit": "2f0e43a" },
+        { "description": "`Geometry` type and `MarginHeaderLines()` for page margin configuration", "commit": "2f0e43a" },
+        { "description": "`MarkdownLines()` helper for markdown document generation", "commit": "2f0e43a" },
+        { "description": "`WriteFiles()` for writing markdown to multiple output formats", "commit": "2f0e43a" },
+        { "description": "CLI helper functions with `ExecSimple()` and `ExecFull()`", "commit": "2f0e43a" }
+      ],
+      "internal": [
+        { "description": "GitHub Actions CI/CD workflows for testing and linting", "commit": "c0d2887" },
+        { "description": "Dependabot configuration", "commit": "1ce2d64" }
+      ],
+      "documentation": [
+        { "description": "Initial README with usage examples", "commit": "4e60f87" }
+      ]
+    }
+  ]
+}
