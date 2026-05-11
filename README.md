@@ -29,10 +29,10 @@ Go helper library for [Pandoc](https://pandoc.org/) document generation.
 
 ## Features
 
-- **Document Generation**: Helper functions for generating Pandoc-compatible markdown
-- **Page Layout**: Geometry and margin configuration utilities
-- **Multi-format Output**: Write to markdown, PDF, and DOCX formats
-- **Citation Management**: Bibliographic references with multiple citation styles
+- 📝 **Document Generation**: Helper functions for generating Pandoc-compatible markdown
+- 📐 **Page Layout**: Geometry and margin configuration utilities
+- 📑 **Multi-format Output**: Write to markdown, PDF, and DOCX formats
+- 📚 **Citation Management**: Bibliographic references with multiple citation styles
 
 ## Installation
 
