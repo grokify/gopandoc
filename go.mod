@@ -3,7 +3,7 @@ module github.com/grokify/gopandoc
 go 1.26.0
 
 require (
-	github.com/grokify/mogo v0.74.4
+	github.com/grokify/mogo v0.74.5
 	github.com/spf13/cobra v1.10.2
 )
 
